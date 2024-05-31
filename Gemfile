@@ -28,7 +28,8 @@ gem "jbuilder"
 
 gem 'fast_jsonapi'
 
-gem 'react-rails'
+gem 'webpacker'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
@@ -65,3 +66,9 @@ group :development do
 
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 end
+
+
+
+# Possivelmente existe um conflito entre algumas gems (turbo rails e hotwire, react-rails e webpacker). Verificar esses
+# possíveis conflitos. Dar preferência em seguir com o "webpacker". Checar a renderização da página, último erro:
+# "Webpacker::Manifest::MissingEntryError in Pages#index". Comparar arquivos com a parte 2 do vídeo.
